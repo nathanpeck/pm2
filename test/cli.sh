@@ -81,7 +81,7 @@ $pm2 start cluster-pm2.json
 spec "Should start well formated json with name for file prefix"
 
 $pm2 list
-spec "Should list processes succesfully"
+spec "Should list processes successfully"
 
 
 $pm2 start multi-echo.json
@@ -175,7 +175,7 @@ spec "Should stop all processes"
 sleep 0.5
 OUT=`$pm2 prettylist | grep -o "stopped" | wc -l`
 [ $OUT -eq 8 ] || fail "Process not stopped"
-success "Process succesfully stopped"
+success "Process successfully stopped"
 
 
 $pm2 kill
@@ -217,7 +217,7 @@ spec "Should delete all processes"
 sleep 0.5
 OUT=`$pm2 prettylist | grep -o "restart_time" | wc -l`
 [ $OUT -eq 0 ] || fail "Process not stopped"
-success "Process succesfully stopped"
+success "Process successfully stopped"
 
 #
 # Cron
